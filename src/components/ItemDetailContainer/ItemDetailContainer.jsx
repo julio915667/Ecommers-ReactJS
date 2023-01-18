@@ -2,27 +2,15 @@ import { doc, getDoc } from 'firebase/firestore';
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import db from '../../services/firebase';
-// import { getProductById } from '../../data/asyncMock';
 import ItemDetail from '../ItemDetail/ItemDetail';
 import Spinner from '../Spinner/Spinner';
 
 const ItemDetailContainer = () => {
 
     const { id } = useParams();
-    const [selectedItem, setSelectedItem] = useState()   //State donde grabo el item  segun el id
-    const [load, setLoad] = useState(true) //Flag que me permite mostrar un spinner mientras cargo los datos
+    const [selectedItem, setSelectedItem] = useState()  
+    const [load, setLoad] = useState(true) 
 
-
-    // useEffect(() => {
-    //     getProductById(id)
-    //         .then(productos => {
-    //             setSelectedItem(productos)
-    //             setLoad(false)
-    //         })
-    //         .catch(err =>
-    //             console.warn(err)
-    //         )
-    // }, [id])
 
     const getSelected = async (idItem) => {
         try {
