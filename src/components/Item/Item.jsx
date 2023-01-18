@@ -10,7 +10,6 @@ const Item = ({ name, image, price, id }) => {
                     <h5 className='card-title'>{name}</h5>
                     <p>{price}</p>
                     
-                    {/* El ver mas va a ir al detalle del producto, por eso se hace con un link y de forma dinamica con el id del producto */}
                     <Link to={`/item/${id}`} className='btn btn_ver_mas'>Ver más</Link>
                 </div>
             </div>
